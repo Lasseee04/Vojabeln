@@ -1,0 +1,10 @@
+:root{
+    --primary: #E3DED3;
+    --secundary: #4C94F6;
+    --base: #333;
+    --text: #fff;
+}
+
+.table-color{
+    background-color: var(--primary) !important;
+}
