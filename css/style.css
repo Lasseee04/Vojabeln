@@ -1,10 +1,55 @@
 :root{
-    --primary: #E3DED3;
-    --secondary: #4C94F6;
+    --primary: #fff3da;
+    --secondary: #a1c8ff;
     --base: #333;
     --text: #fff;
+    background-color: var(--primary);
 }
 
 .table-color{
     background-color: var(--primary) !important;
+}
+
+.fixedPosition{
+    position: fixed !important;
+}
+
+.tablePosition{
+    margin-top: 5%;
+}
+
+
+#frontContainer {
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%; /* Adjust the width of the container as needed */
+      height: 30%; /* Adjust the height of the container as needed */
+      
+      text-align: center;
+}
+
+#dateiKarte{
+    background-color: var(--secondary);
+    border: 2px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 50%;
+    padding: 10px;
+}
+
+#startButton{
+    background-color: var(--secondary);
+    border: 5px solid;
+    position: fixed;
+    border-radius: 20%;
+    bottom: 2%;
+    right: 2%;
+    transform: translate(-10%, -10%);
+    width: 15%;
+    height: 5%;
 }
