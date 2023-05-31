@@ -3,6 +3,7 @@
     --secondary: #a1c8ff;
     --base: #333;
     --text: #fff;
+    --buttonColor: #ddd44f;
     background-color: var(--primary);
 }
 
@@ -19,6 +20,15 @@
 .fixedPosition{
     position: fixed !important;
 }
+
+.greenBackground{
+    background-color: green;
+}
+
+.redBackground{
+    background-color: red;
+}
+
 
 
 #frontContainer {
@@ -51,17 +61,17 @@
 
 .btn-warning {
     --bs-btn-color: #000;
-    --bs-btn-bg: var(--secondary);
-    --bs-btn-border-color: var(--secondary);
+    --bs-btn-bg: var(--buttonColor);
+    --bs-btn-border-color: var(--buttonColor);
     --bs-btn-hover-color: rgb(0, 0, 0);
-    --bs-btn-hover-bg: rgb(153, 212, 252);
-    --bs-btn-hover-border-color: var(--secondary);
+    --bs-btn-hover-bg: rgb(255, 238, 0);
+    --bs-btn-hover-border-color: var(--buttonColor);
     --bs-btn-focus-shadow-rgb: 217,164,6;
     --bs-btn-active-color: #000;
-    --bs-btn-active-bg: var(--secondary);
-    --bs-btn-active-border-color:var(--secondary);
+    --bs-btn-active-bg: var(--buttonColor);
+    --bs-btn-active-border-color:var(--buttonColor);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #000;
-    --bs-btn-disabled-bg: var(--secondary);
-    --bs-btn-disabled-border-color:var(--secondary);
+    --bs-btn-disabled-bg: var(--buttonColor);
+    --bs-btn-disabled-border-color:var(--buttonColor);
 }
