@@ -17,7 +17,9 @@
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -31,7 +33,7 @@
           <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
         </form>
         -->
-        
+
         <div class="text-end">
           <a href="auth\login.html" class="btn btn-outline-light me-2">Login</a>
           <a href="auth\signup.html" class="btn btn-warning">Sign-up</a>
@@ -44,7 +46,9 @@
   <header class="p-3 text-bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <li class="nav-link px-2 text-white"><h2>laufende Abfrage</h2></li>
+        <li class="nav-link px-2 text-white">
+          <h2>laufende Abfrage</h2>
+        </li>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
@@ -62,10 +66,16 @@
   <!--Header Placeholde End-->
 
   <!--rest design-->
+
+
   <div id="dateiKarte" class="text-center">
+
+    <label for="file">Progress:</label>
+    <progress id="file" value="32" max="100"> 32% </progress>
+    
     <div class="text-center">
       Deutsch (Sprache1)
-      <h1>Leben</h1>
+      <h1>Leben (Abgefragtes Wort)</h1>
     </div>
 
     <form>
@@ -76,14 +86,19 @@
 
       <button type="submit" class="btn btn-warning">Previos</button>
       <button type="submit" class="btn btn-warning">Next</button>
-      
     </form>
+
+
+
   </div>
 
-    <!--rest design-->
-    <div>
-      <a href="auswertung.html" id="startButton" class="btn btn-outline-dark btn-warning">Auswerten</a>
-    </div>
+
+
+
+  <!--rest design-->
+  <div>
+    <a href="auswertung.html" class="btn btn-outline-dark btn-warning fixedBottomRight">Auswerten</a>
+  </div>
 
 
   <!--<img class="w-70" src="https://cdn-images.otto-office.com/oode/b2b/deu/mediadatacat/art/1200/OODE_ART_67/OODE_ART_67729GB_00.jpg" alt="gelbe Karteikarte">-->
