@@ -31,7 +31,7 @@
 
 
 
-#frontformContainer {
+#frontContainer {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,18 +54,8 @@
     padding: 10px;
 }
 
-.fixedBottomRight {
-    position: fixed;
-    bottom: 2%;
-    right: 2%;
-    transform: translate(-10%, -10%);
-}
-
-.fixedBottomMidRight {
-    position: fixed;
-    bottom: 2%;
-    right: 15%;
-    transform: translate(-10%, -10%);
+.buttonBar{
+    padding: 2%;
 }
 
 .btn-warning {
@@ -87,9 +77,9 @@
 
 
 
-
-.login-page {
-    width: 360px;
+.login-form,
+.register-form {
+    width: 100%;
     padding: 10% 0 0;
     margin: auto;
 }
@@ -147,9 +137,5 @@
 .form .message a {
     color: var(--buttonColor);
     text-decoration: none;
-}
-
-.form .register-form {
-    display: none;
 }
 
