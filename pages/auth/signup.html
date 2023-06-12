@@ -71,11 +71,11 @@
     <div class="login-form">
     <div class="form">
       <h1>Register</h1>
-      <form class="register-form">
-        <input type="text" placeholder="name"/>
-        <input type="password" placeholder="password"/>
+      <form class="register-form" action="helper/signup.php" method="post">
+        <input name="name" type="text" placeholder="name"/>
+        <input name="password" type="password" placeholder="password"/>
         <input type="passwordRepeat" placeholder="repeat password"/>
-        <button>create</button>
+        <button type="submit">create</button>
         <p class="message">Already registered? <a href="login.html">Sign In</a></p>
       </form>
     </div>
