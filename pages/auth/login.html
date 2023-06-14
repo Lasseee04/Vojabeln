@@ -107,7 +107,7 @@ if ($result->num_rows > 0) {
 
     // output data of each row 
     while($row = $result->fetch_assoc()) { 
-        echo "id: ".$row["id"]." - nutzername: ".$row["nutzername"]."<br>"; 
+        echo "nutzername: ".$row["nutzername"]." - nutzername: ".$row["nutzername"]."<br>"; 
     } 
 
 } else { 
@@ -125,15 +125,15 @@ if(!isset($_SESSION['userid'])) {
 }
  
 //Abfrage der Nutzer ID vom Login
-$userid = $_SESSION['userid'];
+$userid = $_SESSION['nutzername'];
  
-echo "Hallo User: ".$userid;
-?>
+echo "Hallo User: ".$nutzername;
+
 ?>
  
 <form action="?login=1" method="post">
 nutzername:<br>
-<input type="email" size="40" maxlength="255" name="nutzername"><br><br>
+<input type="nutzername" size="40" maxlength="255" name="nutzername"><br><br>
  
 Dein Passwort:<br>
 <input type="passwort" size="40"  maxlength="255" name="passwort"><br>
