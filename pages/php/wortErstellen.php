@@ -1,6 +1,10 @@
 <?php
-$nutzername = $_POST['nutzername'];
-$passwort = $_POST['passwort'];
+$sprache1 = $_POST['sprache1'];
+$sprache2 = $_POST['sprache2'];
+$wort1 = $_POST['wort1'];
+$wort2 = $_POST['wort2'];
+$schwierigkeit = $_POST['schwierigkeit'];
+
 
 $servername = "localhost"; 
 $username = "vokabeln"; 
@@ -14,7 +18,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error); 
 } 
 
-//login
+//create Word in Database
 
 $sql = "SELECT * from User WHERE nutzername = '".$nutzername."'"; 
 $result = $conn->query($sql); 

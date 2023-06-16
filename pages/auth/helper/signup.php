@@ -3,9 +3,9 @@ $nutzername = $_POST['nutzername'];
 $passwort = $_POST['passwort'];
 
 $servername = "localhost"; 
-$username = "username"; 
-$password = "password"; 
-$dbname = "myDB"; 
+$username = "vokabeln"; 
+$password = "Q1ShlM_vokablen"; 
+$dbname = "vokablen"; 
 
 // Create connection 
 $conn = new mysqli($servername, $username, $password, $dbname); 
@@ -36,21 +36,6 @@ if($result-> num_rows <= 0){
 }else{
     //username already exists
     echo "Dieser Nutzername ist nicht verfügbar."
-}
-
-
-
-if ($result->num_rows > 0) { 
-    // output data of each row 
-    while($row = $result->fetch_assoc()) { 
-
-        --echo "id: ".$row["id"]." - Saison: ".$row["saison"]."<br>"; 
-    } 
-
-} else { 
-
-    echo "0 results"; 
-
 } 
 
 $conn->close(); 
