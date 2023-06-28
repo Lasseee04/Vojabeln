@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
                 $_SESSION['nutzername'] = $nutzername;
                 header('LOCATION ../../index.html');
             }else{
-                echo "Das Passwort ist Falsch";
+                echo "Das Passwort ist falsch";
             }
 }else{
     echo "Der Nutzername existiert nicht";
