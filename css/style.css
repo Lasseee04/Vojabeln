@@ -1,0 +1,150 @@
+:root {
+    --primary: #fff3da;
+    --secondary: #a1c8ff;
+    --base: #333;
+    --text: #fff;
+    --buttonColor: #ddd44f;
+    background-color: var(--primary);
+}
+
+.table-color {
+    background-color: var(--primary) !important;
+}
+
+.secondaryColor {
+    background-color: var(--secondary);
+}
+
+
+
+.fixedPosition {
+    position: fixed !important;
+}
+
+.greenBackground {
+    background-color: green;
+}
+
+.redBackground {
+    background-color: red;
+}
+
+
+
+#frontContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    /* Adjust the width of the formContainer as needed */
+    height: 30%;
+    /* Adjust the height of the formContainer as needed */
+
+    text-align: center;
+}
+
+#dateiKarte {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+}
+
+.buttonBar{
+    padding: 2%;
+}
+
+.btn-warning {
+    --bs-btn-color: #000;
+    --bs-btn-bg: var(--buttonColor);
+    --bs-btn-border-color: var(--buttonColor);
+    --bs-btn-hover-color: rgb(0, 0, 0);
+    --bs-btn-hover-bg: rgb(255, 238, 0);
+    --bs-btn-hover-border-color: var(--buttonColor);
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: var(--buttonColor);
+    --bs-btn-active-border-color: var(--buttonColor);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: var(--buttonColor);
+    --bs-btn-disabled-border-color: var(--buttonColor);
+}
+
+
+
+.login-form,
+.register-form {
+    width: 100%;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: var(--buttonColor);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+    background: var(--buttonColor);
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: var(--buttonColor);
+    text-decoration: none;
+}
+
+.table_btn{
+    border: 0;
+    background: transparent;
+}
+
+.modal{
+    --bs-modal-width: 700px;
+}
+
