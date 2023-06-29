@@ -1,6 +1,6 @@
 <?php
-$sprache1 = $_POST['Sprache'][0];
-$sprache2 = $_POST['Sprache'][1];
+$sprache1 = $_POST['sprache'][0];
+$sprache2 = $_POST['sprache'][1];
 $wort1 = $_POST['wort1'];
 $wort2 = $_POST['wort2'];
 $schwierigkeit = $_POST['schwierigkeit'];
