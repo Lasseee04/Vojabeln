@@ -129,6 +129,7 @@ if ($gehoert_zu_rows->num_rows > 0) {
             <input type="text" placeholder="Wort1"/> 
             <input type="text" placeholder="Wort2"/>
             <input type="number" placeholder="Schwierigkeit"/>
+            <input type="text" placeholder="Tipp"/>
           </form>
         </div>
         <div class="modal-footer">
