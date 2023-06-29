@@ -24,7 +24,6 @@ if ($gehoert_zu_rows->num_rows > 0) {
     $data[$pnr] = [];
     $besitzt_rows = $conn->query('SELECT * FROM besitzt WHERE pnr = '. $pnr);
     while($besitzt = $besitzt_rows->fetch_assoc()) {
-      $string = utf8_encode($string);
       $data[$pnr][] = utf8_encode($besitzt['textv']);
     }
     $paar_rows = $conn->query('SELECT schwierigkeit FROM Paar where pnr ='.$pnr);
@@ -32,13 +31,6 @@ if ($gehoert_zu_rows->num_rows > 0) {
     $data[$pnr][] = $schwierigkeit;
   }
 }
-
-/*
-echo '<pre>';
-print_r($data);
-echo '</pre>';
-exit();
-*/
 
 ?> 
 
@@ -63,20 +55,14 @@ exit();
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <li class="nav-link px-2 text-white">
-          <h2>Ordernername</h2>
+          <h2>Ordner</h2>
         </li>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
-          <li><a href="myGroups.html" class="nav-link px-2 text-white">Ordner</a></li>
-          <li><a href="abfrage.html" class="nav-link px-2 text-white">Abfrage</a></li>
+          <li><a href="myGroups.php" class="nav-link px-2 text-white">Ordner</a></li>
+          <li><a href="abfrage.php" class="nav-link px-2 text-white">Abfrage</a></li>
         </ul>
-
-        <!--
-              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-          </form>
-          -->
 
         <div class="text-end">
           <a href="auth\login.html" class="btn btn-outline-light me-2">Login</a>
@@ -90,15 +76,23 @@ exit();
   <header class="p-3 text-bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <li class="nav-link px-2 text-white">
-          <h2>(Ordernername)</h2>
-        </li>
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
           <li><a href="pages/myGroups.html" class="nav-link px-2 text-white">Ordner</a></li>
           <li><a href="pages/abfrage.html" class="nav-link px-2 text-white">Abfrage</a></li>
         </ul>
+
+        <!--
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+            -->
 
         <div class="text-end">
           <a href="pages\auth\login.html" class="btn btn-outline-light me-2">Login</a>
@@ -108,6 +102,7 @@ exit();
     </div>
   </header>
   <!--Header Placeholde End-->
+
 
   <div class="fixed-bottom buttonBar">
     <div class="text-end">
@@ -163,7 +158,7 @@ exit();
               $sprachen_result = $conn->query('SELECT * FROM Sprache');
               if ($sprachen_result->num_rows > 0) { 
                 while($sprache = $sprachen_result->fetch_assoc()) {
-                  echo '<option value="'.$sprache['Bezeichnung'].'">'.$sprache['Bezeichnung'].'</option>'
+                  echo '<option value="'.$sprache['Bezeichnung'].'">'.$sprache['Bezeichnung'].'</option>';
                 }
               }
             ?>
@@ -174,7 +169,7 @@ exit();
               $sprachen_result = $conn->query('SELECT * FROM Sprache');
               if ($sprachen_result->num_rows > 0) { 
                 while($sprache = $sprachen_result->fetch_assoc()) {
-                  echo '<option value="'.$sprache['Bezeichnung'].'">'.$sprache['Bezeichnung'].'</option>'
+                  echo '<option value="'.$sprache['Bezeichnung'].'">'.$sprache['Bezeichnung'].'</option>';
                 }
               }
             ?>
@@ -190,12 +185,6 @@ exit();
           </div>
         </form>
       </div>
-      <!--
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Create</button>
-      </div>
-      -->
     </div>
   </div>
 </div>
@@ -236,7 +225,7 @@ exit();
 <?php
         if (count($data) > 0) { 
           // output data of each row 
-          echo '<table class="table table-color table-striped table-borderless table-hover tablePosition" width="100%">
+          echo '<table class="table table-color table-striped table-borderless table-hover" width="100%">
          <thead>
           <tr>
             <th width = 40% scope="col">Sprache1</th>
@@ -249,7 +238,6 @@ exit();
             <tbody>';
             foreach($data as $row) { 
               echo '<tr>
-                <td><input type="checkbox"></td>
                 <td>'.$row[0].'</td>
                 <td>'.$row[1].'</td> 
                 <td>'.$row[2].'</td>
@@ -273,12 +261,7 @@ exit();
           }
           
           $conn->close();
-          ?> 
-
-
-
-
-
+?> 
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

@@ -54,15 +54,9 @@ if ($gehoert_zu_rows->num_rows > 0) {
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
-          <li><a href="myGroups.html" class="nav-link px-2 text-white">Ordner</a></li>
-          <li><a href="abfrage.html" class="nav-link px-2 text-white">Abfrage</a></li>
+          <li><a href="myGroups.php" class="nav-link px-2 text-white">Ordner</a></li>
+          <li><a href="abfrage.php" class="nav-link px-2 text-white">Abfrage</a></li>
         </ul>
-
-        <!--
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-            </form>
-            -->
 
         <div class="text-end">
           <a href="auth\login.html" class="btn btn-outline-light me-2">Login</a>
@@ -87,12 +81,6 @@ if ($gehoert_zu_rows->num_rows > 0) {
           <li><a href="pages/myGroups.html" class="nav-link px-2 text-white">Ordner</a></li>
           <li><a href="pages/abfrage.html" class="nav-link px-2 text-white">Abfrage</a></li>
         </ul>
-
-        <!--
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-            </form>
-            -->
 
         <div class="text-end">
           <a href="pages\auth\login.html" class="btn btn-outline-light me-2">Login</a>
@@ -205,7 +193,7 @@ if ($gehoert_zu_rows->num_rows > 0) {
 
 if (isset($result) && $result->num_rows > 0) {  
   // output data of each row  
-  echo '<table class="table table-color table-striped table-borderless table-hover tablePosition" width="100%"> 
+  echo '<table class="table table-color table-striped table-borderless table-hover" width="100%"> 
   <thead>  
 <tr>  
 <th width=2% scope="col"></th>  
@@ -241,12 +229,12 @@ if (isset($result) && $result->num_rows > 0) {
             }  
             $sprachen = implode(', ', $sprachen_result);
           } 
-    echo '<tr> s
+    echo '<tr>
               <td><i class="bi bi-folder"></i></td>  
               <td><a href="myGroup.php?oid='.$row["oid"].'" style="text-decoration: none; color: inherit">'.$row["name"].'</a></td> 
-              <td>'.$sprachen'</td> 
-              <td>'.$schnitt'</td> 
-              <td>'.$anzahl'</td> 
+              <td>'.$sprachen.'</td> 
+              <td>'.$schnitt.'</td> 
+              <td>'.$anzahl.'</td> 
               <td>
               <button type="button" class="table_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class="bi bi-pencil-square"></i>
@@ -269,10 +257,6 @@ if (isset($result) && $result->num_rows > 0) {
 }  
 $conn->close();
 ?> 
-
-
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>

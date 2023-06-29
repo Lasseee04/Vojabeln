@@ -140,8 +140,8 @@
 }
 
 .table_btn{
-    border: 0;
-    background: transparent;
+    border: 0 !important;
+    background: transparent !important;
 }
 
 .modal{
