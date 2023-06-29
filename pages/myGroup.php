@@ -126,10 +126,10 @@ if ($gehoert_zu_rows->num_rows > 0) {
         </div>
         <div class="modal-body">
           <form>
-            <input name="Tipp" type="text" placeholder="Wort1"/> 
-            <input name="Tipp" type="text" placeholder="Wort2"/>
-            <input name="Tipp" type="number" placeholder="Schwierigkeit"/>
-            <input name="Tipp" type="text" placeholder="Tipp"/>
+            <input name="wort1" type="text" placeholder="Wort1"/> 
+            <input name="wort2" type="text" placeholder="Wort2"/>
+            <input name="schwierigkeit" type="number" placeholder="Schwierigkeit"/>
+            <input name="tipp" type="text" placeholder="Tipp"/>
           </form>
         </div>
         <div class="modal-footer">
@@ -179,7 +179,7 @@ if ($gehoert_zu_rows->num_rows > 0) {
           <input name="wort1" type="text" placeholder="Wort1"/> 
           <input name="wort2" type="text" placeholder="Wort2"/>
           <input name="schwierigkeit" type="number" placeholder="Schwierigkeit"/>
-          <input name="Tipp" type="text" placeholder="Tipp"/>
+          <input name="tipp" type="text" placeholder="Tipp"/>
           <p></p>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
