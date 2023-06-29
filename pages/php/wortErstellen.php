@@ -21,20 +21,20 @@ if ($conn->connect_error) {
 
 //create Word in Database
 
-$sql = "inset into Vokabel(textv, Bezeichnung) values('.$wort1', '.$sprache1')"; 
+$sql = "insert into Vokabel(textv, Bezeichnung) values('.$wort1', '.$sprache1')"; 
 $conn->query($sql);
 
-$sql = "inset into Vokabel(textv, Bezeichnung) values('.$wort2', '.$sprache2')"; 
+$sql = "insert into Vokabel(textv, Bezeichnung) values('.$wort2', '.$sprache2')"; 
 $conn->query($sql);
 
-$sql = "inset into Paar(tipp, schwierigkeit) values('.$tipp', '.$schwierigkeit')"; 
+$sql = "insert into Paar(tipp, schwierigkeit) values('.$tipp', '.$schwierigkeit')"; 
 $conn->query($sql);
 $pnr = $conn->insert_id;
 
-$sql = "inset into besitzt(pnr, textv, bezeichnung) values('.$pnr' '.$wort1', '.$sprache1')"; 
+$sql = "insert into besitzt(pnr, textv, bezeichnung) values('.$pnr' '.$wort1', '.$sprache1')"; 
 $conn->query($sql);
 
-$sql = "inset into besitzt(pnr, textv, bezeichnung) values('.$pnr '.$wort2', '.$sprache2')"; 
+$sql = "insert into besitzt(pnr, textv, bezeichnung) values('.$pnr '.$wort2', '.$sprache2')"; 
 $conn->query($sql);
 
 
