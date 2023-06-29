@@ -14,5 +14,6 @@ jobs:
           server: vokabeln.bplaced.net
           user: vokabeln
           password: ${{ secrets.ftp_password }}
-          local_dir: "./www/vokabeln/"
+          local_dir: "./"
+          remote_dir: "./www/vokabeln/"
           delete: "true"
