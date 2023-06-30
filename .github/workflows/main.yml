@@ -5,6 +5,7 @@ on:
     paths-ignore:
       - 'README.md'
       - '.git'
+      - '.github'
 jobs:
   build:
     runs-on: ubuntu-latest
