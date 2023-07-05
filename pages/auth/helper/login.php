@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
                 //anmelden
                 session_start();
                 $_SESSION['nutzername'] = $nutzername;
-                header('LOCATION ../../index.html');
+                header('Location: ../../../index.php');
             }else{
                 echo "Das Passwort ist Falsch";
             }

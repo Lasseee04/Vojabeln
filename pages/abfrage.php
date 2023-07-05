@@ -90,14 +90,9 @@ if ($gehoert_zu_rows->num_rows > 0) {
    <!--Header Placeholde End--> 
 
 
-   <!--rest design-->
-  <div class="fixed-bottom buttonBar">
-    <div class="text-end">
-      <a href="gestartet.html" class="btn btn-outline-dark btn-warning">Start</a>
-    </div>
-  </div>
+   
 
-
+<form action="php/start.php" method="post">
   <?php 
 
 if (isset($result) && $result->num_rows > 0) {  
@@ -137,11 +132,11 @@ if (isset($result) && $result->num_rows > 0) {
             $sprachen = implode(', ', $sprachen_result);
           } 
     echo '<tr>
-              <td><input type="checkbox"></td>  
+              <td><input type="checkbox" name="selected[]" value="'.$row["oid"].'"></td>
               <td><a href="myGroup.php?oid='.$row["oid"].'" style="text-decoration: none; color: inherit">'.$row["name"].'</a></td> 
-              <td>'.$sprachen'</td> 
-              <td>'.$schnitt'</td>
-              <td>'.$anzahl'</td>         
+              <td>'.$sprachen.'</td> 
+              <td>'.$schnitt.'</td>
+              <td>'.$anzahl.'</td>         
             </tr>'; 
           }
    
@@ -154,194 +149,16 @@ if (isset($result) && $result->num_rows > 0) {
 $conn->close();
 ?> 
 
+<!--rest design-->
+<div class="fixed-bottom buttonBar">
+    <div class="text-end">
+      <!--<a href="gestartet.html" class="btn btn-outline-dark btn-warning">Start</a>-->
+      <button type="submit" class="btn btn-primary">Start</button>
+    </div>
+  </div>
+</form>
 
-  <!--
-  <table class="table table-color table-striped table-borderless table-hover">
-    <thead>
-      <tr>
-        <th width=2% scope="col"></th>
-        <th width=33% scope="col">Name</th>
-        <th width=20% scope="col">Sprache1</th>
-        <th width=20% scope="col">Sprache2</th>
-        <th width=15% scope="col">Schwierigkeit</th>
-        <th width=10% scope="col">Wörter</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Linking Words</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>7.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Globalisation</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Great Britain</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.8</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>My Son The Fanatic</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Julia</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>3.0</td>
-        <td>105</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>American Dream</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Synonyme für "say"</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>2.4</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Adjectives</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.0</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Cambridge C2</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>5.0</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Shooting an Elephant</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Lasse</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>8.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Great Britain</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Linking Words</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Jacob</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Great Britain</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Linking Words</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Great Britain</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Linking Words</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>Great Britain</td>
-        <td>Deutsch</td>
-        <td>Englisch</td>
-        <td>4.3</td>
-        <td>145</td>
-      </tr>
-    </tbody>
 
-  </table>
--->
-
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 

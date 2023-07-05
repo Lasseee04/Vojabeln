@@ -37,16 +37,21 @@ session_start();
             </form>
             -->
 
+
+            
         <div class="text-end">
         <?php 
+
         
-        print_r($_SESSION);
+        
         if(isset($_SESSION['nutzername'])){
-          echo' <form action="auth/helper/logout.php>
+          print_r($_SESSION['nutzername']);
+          echo' <a href="pages/auth/helper/logout.php">
           <button type="submit" class="btn btn-outline-light me-2" data-bs-dismiss="modal">logout</button>
-          </form>';
-        }else{
+          </a>';
           
+        }else{
+          print_r("Guest");
           echo' <a href="pages/auth/login.html" class="btn btn-outline-light me-2">Login</a>';
         }
         ?>
