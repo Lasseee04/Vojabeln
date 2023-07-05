@@ -1,11 +1,8 @@
 <?php
-$sprache1 = $_POST['sprache'][0];
-$sprache2 = $_POST['sprache'][1];
-$wort1 = $_POST['wort1'];
-$wort2 = $_POST['wort2'];
-$schwierigkeit = $_POST['schwierigkeit'];
-$tipp = $_POST['tipp'];
-
+$name = $_POST['name'];
+$oid = $_POST['oid'];
+$schwierigkeitsschnitt = $_POST['schwierigkeitsschnitt'];
+$privat = $_POST['privat'];
 
 $servername = "localhost"; 
 $username = "vokabeln"; 
@@ -19,19 +16,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error); 
 } 
 
-//create Word in Database
+//create Ordner in Database
 
-$sql = "insert into Vokabel(textv, Bezeichnung) values('.$wort1', '.$sprache1')"; 
+$sql = "insert into Ordner(name, privat) values('.$name', '.$schwierigkeitsschnitt)"; 
 $conn->query($sql);
+$oid = $conn->insert_id;
 
-$sql = "insert into Vokabel(textv, Bezeichnung) values('.$wort2', '.$sprache2')"; 
-$conn->query($sql);
 
-$sql = "insert into Paar(tipp, schwierigkeit) values('.$tipp', '.$schwierigkeit')"; 
-$conn->query($sql);
-$pnr = $conn->insert_id;
-
-$sql = "insert into besitzt(pnr, textv, bezeichnung) values('.$pnr' '.$wort1', '.$sprache1')"; 
+$sql = "insert into nutzt(nutzernname, oid) values('.$nutzername' '.$wort1', '.$sprache1')"; 
 $conn->query($sql);
 
 $sql = "insert into besitzt(pnr, textv, bezeichnung) values('.$pnr '.$wort2', '.$sprache2')"; 
