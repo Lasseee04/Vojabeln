@@ -1,7 +1,6 @@
 <?php
 $name = $_POST['name'];
 $oid = $_POST['oid'];
-$schwierigkeitsschnitt = $_POST['schwierigkeitsschnitt'];
 $privat = $_POST['privat'];
 
 $servername = "localhost"; 
@@ -16,9 +15,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error); 
 } 
 
-//create Ordner in Database
+//create Ordner in Database mit name und private
 
-$sql = "insert into Ordner(name, privat) values('.$name', '.$schwierigkeitsschnitt)"; 
+$sql = "insert into Ordner(name, privat) values('.$name', '.$privat)"; 
 $conn->query($sql);
 $oid = $conn->insert_id;
 
