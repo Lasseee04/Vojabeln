@@ -22,14 +22,8 @@ $sql = "insert into Ordner(name, privat) values('.$name', '.$schwierigkeitsschni
 $conn->query($sql);
 $oid = $conn->insert_id;
 
-
-$sql = "insert into nutzt(nutzernname, oid) values('.$nutzername' '.$wort1', '.$sprache1')"; 
+$sql = "insert into nutzt(nutzernname, oid) values('.$_SESSION['nutzername']' '.$oid')"; 
 $conn->query($sql);
-
-$sql = "insert into besitzt(pnr, textv, bezeichnung) values('.$pnr '.$wort2', '.$sprache2')"; 
-$conn->query($sql);
-
-
 
 $conn->close(); 
 exit();
