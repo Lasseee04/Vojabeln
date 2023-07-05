@@ -3,7 +3,7 @@
 session_start();
 session_destroy();
 
-header('LOCATION ../../index.html');
+header('Location: ../../index.html');
 exit();
 
 ?>

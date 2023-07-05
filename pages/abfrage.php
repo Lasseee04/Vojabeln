@@ -131,16 +131,16 @@ if (isset($result) && $result->num_rows > 0) {
           if ($result_language->num_rows > 0) {  
             // output data of each row
             $sprachen_result = [];
-            while($row_lang = $result_language->fetch_assoc()) {    
+            while($row_lang = $result_language->fetch_assoc()) {
                 $sprachen_result[] = $row_lang["sprache"];
             }  
             $sprachen = implode(', ', $sprachen_result);
           } 
-    echo '<tr> s
+    echo '<tr>
               <td><input type="checkbox"></td>  
               <td><a href="myGroup.php?oid='.$row["oid"].'" style="text-decoration: none; color: inherit">'.$row["name"].'</a></td> 
               <td>'.$sprachen'</td> 
-              <td>'.$schnitt'</td> 
+              <td>'.$schnitt'</td>
               <td>'.$anzahl'</td>         
             </tr>'; 
           }

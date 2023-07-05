@@ -44,7 +44,6 @@ if ($gehoert_zu_rows->num_rows > 0) {
 </head>
 
 <body>
-  <!--Header-->
   <header class="p-3 text-bg-dark fixed-top">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -59,7 +58,16 @@ if ($gehoert_zu_rows->num_rows > 0) {
         </ul>
 
         <div class="text-end">
-          <a href="auth\login.html" class="btn btn-outline-light me-2">Login</a>
+        <?php 
+        session_start();
+        if(isset($_SESSION['nutzername'])){
+          echo' <a href="auth\login.html" class="btn btn-outline-light me-2">Login</a>';
+        }else{
+          echo' <form action="auth/helper/logout.php>
+          <button type="submit" class="btn btn-outline-light me-2" data-bs-dismiss="modal">logout</button>
+          </form>';
+        }
+        ?>
           <a href="auth\signup.html" class="btn btn-warning">Sign-up</a>
         </div>
       </div>
@@ -121,7 +129,7 @@ if ($gehoert_zu_rows->num_rows > 0) {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
         </div>
       </div>
     </div>
@@ -146,7 +154,7 @@ if ($gehoert_zu_rows->num_rows > 0) {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Create Group</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Create Group</button>
         </div>
       </div>
     </div>

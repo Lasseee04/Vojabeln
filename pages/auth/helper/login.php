@@ -5,15 +5,14 @@ $passwort = $_POST['passwort'];
 $servername = "localhost"; 
 $username = "vokabeln"; 
 $password = "Q1ShlM_vokablen"; 
-$dbname = "vokablen"; 
+$dbname = "vokabeln"; 
 
 // Create connection 
 $conn = new mysqli($servername, $username, $password, $dbname); 
 // Check connection 
 if ($conn->connect_error) { 
     die("Connection failed: " . $conn->connect_error); 
-} 
-
+}
 //login
 
 $sql = "SELECT * from User WHERE nutzername = '".$nutzername."'"; 
