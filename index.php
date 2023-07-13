@@ -96,9 +96,8 @@ session_start();
   <!--Design front Page-->
   <div id="frontContainer">
     <h1>Level up your Skills!</h1>
-    <p>This is a the perfact platform to learn your Vokabs in a struktures manner.</p>
+    <p>This is a the perfact platform to learn your Vocabs in a structured manner.</p>
   </div>
-
 
 
 
